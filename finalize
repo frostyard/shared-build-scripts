@@ -2,6 +2,9 @@
 
 set -ouex pipefail
 
+echo "::group::Executing finalize"
+trap 'echo "::endgroup::"' EXIT
+
 # Clean folders for bootc
 rm -rf \
     /boot \
