@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -ouex pipefail
+
+# Clean folders for bootc
+rm -rf \
+    /boot \
+    /home \
+    /root \
+    /srv
+
+mkdir /boot
+mkdir /root 
+mkdir /home
+mkdir /srv
+
+# Set up ostree sysroot
+if [ ! -f /sysroot ]; then
+  mkdir /sysroot
+  ln -s sysroot/ostree ostree
+fi
+
+# Ensure image first-boot works
+rm -f /etc/machine-id
