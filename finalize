@@ -15,7 +15,7 @@ mkdir /home
 mkdir /srv
 
 # Set up ostree sysroot
-if [ ! -f /sysroot ]; then
+if [ ! -d /sysroot ]; then
   mkdir /sysroot
   ln -s sysroot/ostree ostree
 fi
