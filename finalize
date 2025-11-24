@@ -7,10 +7,10 @@ trap 'echo "::endgroup::"' EXIT
 
 # Clean folders for bootc
 rm -rf \
-    /boot \
-    /home \
-    /root \
-    /srv
+  /boot \
+  /home \
+  /root \
+  /srv
 
 mkdir /boot
 mkdir /root 
