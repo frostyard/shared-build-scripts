@@ -12,4 +12,5 @@ dracut --force --no-hostonly --reproducible --zstd --verbose \
 
 if [ -f "/boot/vmlinuz-$KERNEL_VERSION" ]; then
   cp -f "/boot/vmlinuz-$KERNEL_VERSION" "/usr/lib/modules/$KERNEL_VERSION/vmlinuz"
+  echo "vmlinuz moved successfully"
 fi
