@@ -10,13 +10,12 @@ rm -rf \
   /boot \
   /home \
   /root \
-  /srv 
+  /srv
 
 mkdir /boot
 mkdir /root 
 mkdir /home
 mkdir /srv
-
 
 # Set up ostree sysroot
 if [ ! -d /sysroot ]; then
