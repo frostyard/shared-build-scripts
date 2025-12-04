@@ -25,3 +25,16 @@ fi
 
 # Ensure image first-boot works
 rm -f /etc/machine-id
+
+# Remove files that user should have full control of
+if [ -f /etc/passwd ]; then
+  echo "Removing /etc/passwd with the following contents:"
+  cat /etc/passwd
+  rm -f /etc/passwd
+fi
+
+if [ -f /etc/group ]; then
+  echo "Removing /etc/group with the following contents:"
+  cat /etc/group
+  rm -f /etc/group
+fi
