@@ -25,3 +25,6 @@ fi
 
 # Ensure image first-boot works
 rm -f /etc/machine-id
+
+# Remove SSH Keys
+rm -f /etc/ssh/ssh_host_*
